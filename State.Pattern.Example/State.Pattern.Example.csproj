@@ -9,9 +9,13 @@
   <ItemGroup>
     <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.2.8" />
+    <PackageReference Include="Stateless" Version="5.1.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="Stateless.Implementation\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="StatePattern.Implementation\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
