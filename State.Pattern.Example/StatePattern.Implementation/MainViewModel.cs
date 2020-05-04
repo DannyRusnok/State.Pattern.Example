@@ -18,9 +18,9 @@ namespace State.Pattern.Example.StatePattern.Implementation
         public MainViewModel()
         {
             CreateOrderCommand = new RelayCommand(() => OrderContext.CurrentState.Create(OrderContext));
-            CancelOrderCommand = new RelayCommand(() => OrderContext.CurrentState.Create(OrderContext));
-            ShipOrderCommand = new RelayCommand(() => OrderContext.CurrentState.Create(OrderContext));
-            NewOrderCommand = new RelayCommand(() => OrderContext.CurrentState.Create(OrderContext));
+            CancelOrderCommand = new RelayCommand(() => OrderContext.CurrentState.Cancel(OrderContext));
+            ShipOrderCommand = new RelayCommand(() => OrderContext.CurrentState.Ship(OrderContext));
+            NewOrderCommand = new RelayCommand(() => OrderContext.CurrentState.Reset(OrderContext));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

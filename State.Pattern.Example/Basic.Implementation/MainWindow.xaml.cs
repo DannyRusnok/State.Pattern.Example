@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace State.Pattern.Example.CommonImplementation
+namespace State.Pattern.Example.Basic.Implementation
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

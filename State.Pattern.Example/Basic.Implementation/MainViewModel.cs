@@ -4,7 +4,7 @@ using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
 using State.Pattern.Example.Annotations;
 
-namespace State.Pattern.Example.CommonImplementation
+namespace State.Pattern.Example.Basic.Implementation
 {
     public class MainViewModel : INotifyPropertyChanged
     {

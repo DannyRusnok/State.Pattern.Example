@@ -1,11 +1,11 @@
-﻿<Window x:Class="State.Pattern.Example.CommonImplementation.MainWindow"
+﻿<Window x:Class="State.Pattern.Example.Basic.Implementation.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:State.Pattern.Example"
+        xmlns:implementation="clr-namespace:State.Pattern.Example.Basic.Implementation"
         mc:Ignorable="d"
-        d:DataContext="{d:DesignInstance local:MainViewModel, IsDesignTimeCreatable=False}"
+        d:DataContext="{d:DesignInstance implementation:MainViewModel, IsDesignTimeCreatable=False}"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -23,14 +23,10 @@
             <Label Content="{Binding OrderDetail.State, UpdateSourceTrigger=PropertyChanged}" FontWeight="Bold" FontSize="20"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
-            <Button Content="Reset" Command="{Binding NewOrderCommand}" Width="100" Height="50" Margin="5" 
-                    IsEnabled="{Binding OrderDetail.IsResetable, UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Content="Create" Command="{Binding CreateOrderCommand}" Width="100" Height="50" Margin="5" 
-                    IsEnabled="{Binding OrderDetail.IsCreateable, UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Content="Cancel" Command="{Binding CancelOrderCommand}" Width="100" Height="50" Margin="5"
-                    IsEnabled="{Binding OrderDetail.IsCancelable, UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Content="Ship" Command="{Binding ShipOrderCommand}" Width="100" Height="50" Margin="5"
-                    IsEnabled="{Binding OrderDetail.IsShippable, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Content="Reset" Command="{Binding NewOrderCommand}" Width="100" Height="50" Margin="5"/>
+            <Button Content="Create" Command="{Binding CreateOrderCommand}" Width="100" Height="50" Margin="5"/>
+            <Button Content="Cancel" Command="{Binding CancelOrderCommand}" Width="100" Height="50" Margin="5"/>
+            <Button Content="Ship" Command="{Binding ShipOrderCommand}" Width="100" Height="50" Margin="5"/>
         </StackPanel>
 
     </Grid>
